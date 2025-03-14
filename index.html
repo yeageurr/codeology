@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Codeology</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo__pageName">
+      <img src="images.png" alt="">
+      <div class="myname">
+        <p class="page_name">CODEOLOGY</p>
+        <p class="name">Domasig Anthony</p>
+      </div>
+    </div>
+    <nav class="navigation">
+      <ul class="nav__links">
+        <li><button id="home_btn" onclick="hideLessons()">Home</button></li>
+        <li><button id="about_btn" onclick="hideLessons()">About</button></li>
+        <li><button class="header_lesson" id="html_btn">HTML</button></li>
+        <li><button class="header_lesson" id="js_btn" value="1">JavaScript</button></li>
+        <li><button class="header_lesson" id="php_btn" value="2">PHP</button></li>
+        <li><button class="header_lesson" id="python_btn" value="3">Python</button></li>
+        <li><button class="header_lesson" id="cLang_btn" value="4">C Language</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!--Side Navigation Panel-->
+    <aside class="side_navigation">
+      <div class="lessons" id="html">
+        <p class="top_label">HTML Tutorial</p>
+        <ul class="sidenav">
+          <li id="html_introduction"><button>HTML Introduction</button></li>
+          <li id="html__basics"><button>HTML Basics</button></li>
+          <li id="html__metadata"><button>HTML Metadata</button></li>
+          <li id="html__textF"><button>HTML Text Formatting</button></li>
+          <li id="html__semantics"><button>HTML Semantic Elements</button></li>
+          <li id="html__links"><button>HTML Links</button></li>
+          <li id="html__media"><button>HTML Images/Media</button></li>
+          <li id="html__forms"><button>HTML Forms</button></li>
+          <li id="html__tables"><button>HTML Tables</button></li>
+          <li id="html__lists"><button>HTML Lists</button></li>
+          <li id="html__layout"><button>HTML Layout</button></li>
+          <li id="html__colors"><button>HTML Colors</button></li>
+          <li id="html__css"><button>HTML CSS</button></li>
+        </ul>
+      </div>
+      <div class="lessons" id="javascript">
+        <p class="top_label">JavaScript Tutorial</p>
+        <ul class="sidenav">
+          <li><button>JS Introduction</button></li>
+          <li><button>JS Syntax</button></li>
+          <li><button>JS Output</button></li>
+          <li><button>JS Data Types</button></li>
+          <li><button>JS Variables</button></li>
+          <li><button>JS Operators</button></li>
+          <li><button>JS If... Else...</button></li>
+          <li><button>JS Switch Case</button></li>
+          <li><button>JS Loops</button></li>
+          <li><button>JS Functions</button></li>
+          <li><button>JS DOM Manipulation</button></li>
+          <li><button>JS Events</button></li>
+        </ul>
+      </div>
+      <div class="lessons" id="php">
+        <p class="top_label">PHP Tutorial</p>
+        <ul class="sidenav">
+          <li><button>PHP Introduction</button></li>
+          <li><button>PHP Syntax</button></li>
+          <li><button>PHP Output</button></li>
+          <li><button>PHP Data Types</button></li>
+          <li><button>PHP Variables</button></li>
+          <li><button>PHP Operators</button></li>
+          <li><button>PHP If... Else...</button></li>
+          <li><button>PHP Switch Case</button></li>
+          <li><button>PHP Loops</button></li>
+          <li><button>PHP Functions</button></li>
+          <li><button>PHP Superglobals</button></li>
+        </ul>
+      </div>
+      <div class="lessons" id="python">
+        <p class="top_label">Python Tutorial</p>
+        <ul class="sidenav">
+          <li><button>Python Introduction</button></li>
+          <li><button>Python Syntax</button></li>
+          <li><button>Python Output</button></li>
+          <li><button>Python Data Types</button></li>
+          <li><button>Python Variables</button></li>
+          <li><button>Python Operators</button></li>
+          <li><button>Python If... Else...</button></li>
+          <li><button>Python Loops</button></li>
+          <li><button>Python Lists</button></li>
+          <li><button>Python Tuples</button></li>
+          <li><button>Python Sets</button></li>
+          <li><button>Python Dictionary</button></li>
+          <li><button>Python Functions</button></li>
+          <li><button>Python Classes/Objects</button></li>
+          <li><button>Python Try... Except...</button></li>
+        </ul>
+      </div>
+      <div class="lessons" id="cLang">
+        <p class="top_label">C Language</p>
+        <ul class="sidenav">
+          <li><button>C Introduction</button></li>
+          <li><button>C Syntax</button></li>
+          <li><button>C Output</button></li>
+          <li><button>C Data Types</button></li>
+          <li><button>C Variables</button></li>
+          <li><button>C If... Else...</button></li>
+          <li><button>C Switch Case</button></li>
+          <li><button>C Loops</button></li>
+          <li><button>C Functions</button></li>
+          <li><button>C Arrays</button></li>
+          <li><button>C Strings</button></li>
+        </ul>
+      </div>
+      <br>
+      <br>
+      <div class="myinfo">
+        <p class="top_label">Works</p>
+        <ul class="works sidenav">
+          <li><button>API Activity</button></li>
+          <li><button>Random Dog API</button></li>
+          <li><button>Random Cat API</button></li>
+          <li><button>Random Quote API</button></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!--Main Content — Lessons-->
+    <main>
+      <section class="topics" id="html_default">
+        <p class="top_label">HTML Introduction</p>
+        <br><hr><br>
+        <p>HTML is the standard markup language for creating Web Pages.</p>
+        <br><hr><br>
+        <div class="topic_container">
+          <p class="top_sublabel">What is HTML?</p>
+          <ul class="definition">
+            <li>HTML stands for <span style="font-weight: 700;">Hyper Text Markup Language</span>.</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+          </ul>
+        </div>
+        <br><hr><br>
+
+        <div class="html_codes topic_container">
+          <p>A Simple HTML Document</p>
+          <br>
+          <code class="editor"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+            &lt;!DOCTYPE html&gt;
+            <br>
+            &lt;html&gt;
+            <br>
+            &lt;head&gt;
+            <br>
+            &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+            <br>
+            &lt;/head&gt;
+            <br><br>
+            &lt;body&gt;<br>
+            &nbsp;&nbsp;&lt;h1&gt;My First Heading&lt;/h1&gt;<br>
+            &nbsp;&nbsp;&lt;p&gt;My First Paragraph&lt;/p&gt;
+            <br>&lt;/body&gt;<br>
+            <br>&lt;/html&gt;
+          </code>
+        </div><br><hr><br>
+
+        <div class="html_history topic_container">
+          <p class="top_label">HTML History</p>
+          <p class="sublabel">Since the early days of the World Wide Web, there have been many versions of HTML:</p>
+          <div class="table">
+            <table>
+              <tr>
+                <th>Year</th>
+                <th>Version</th>
+              </tr>
+              <tr>
+                <td>1989</td>
+                <td>Tim Berners-Lee invented www</td>
+              </tr>
+              <tr>
+                <td>1991</td>
+                <td>Tim Berners-Lee invented HTML</td>
+              </tr>
+              <tr>
+                <td>1993</td>
+                <td>Dave Raggett drafted HTML+</td>
+              </tr>
+              <tr>
+                <td>1995</td>
+                <td>HTML Working Group defined HTML 2.0</td>
+              </tr>
+              <tr>
+                <td>1997</td>
+                <td>W3C Recommendation: HTML 3.2</td>
+              </tr>
+              <tr>
+                <td>1999</td>
+                <td>W3C Recommendation: HTML 4.01</td>
+              </tr>
+              <tr>
+                <td>2000</td>
+                <td>W3C Recommendation: XHTML 1.0</td>
+              </tr>
+              <tr>
+                <td>2008</td>
+                <td>WHATWG HTML5 First Public Draft</td>
+              </tr>
+              <tr>
+                <td>2012</td>
+                <td>WHATWG HTML5 Living Standard</td>
+              </tr>
+              <tr>
+                <td>2014</td>
+                <td>W3C Recommendation: HTML5</td>
+              </tr>
+              <tr>
+                <td>2016</td>
+                <td>W3C Candidate Recommendation: HTML 5.1</td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>W3C Recommendation: HTML5.1 2nd Edition</td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>W3C Recommendation: HTML5.1</td>
+              </tr>
+            </table>
+          </div>
+        </div><br><hr><br>
+        <div class="short_text topic_container">
+          <p>This tutorial follows the HTML5 standard. Good Luck!</p>
+        </div>
+      </section>
+
+      <section class="topics" id="html_basics">
+        <p class="top_label">HTML Basics</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_metadata">
+        <p class="top_label">HTML Metadata</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_textF">
+        <p class="top_label">HTML Text Formatting</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_semantics">
+        <p class="top_label">HTML Semantic Elements</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_links">
+        <p class="top_label">HTML Links</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_media">
+        <p class="top_label">HTML Images/Media</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_semantics">
+        <p class="top_label">HTML Semantic Elements</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_forms">
+        <p class="top_label">HTML Forms</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_tables">
+        <p class="top_label">HTML Tables</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_list">
+        <p class="top_label">HTML Lists</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_layout">
+        <p class="top_label">HTML Layout</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_colors">
+        <p class="top_label">HTML Colors</p>
+        <br><hr><br>
+      </section>
+
+      <section class="topics" id="html_css">
+        <p class="top_label">HTML CSS</p>
+        <br><hr><br>
+      </section>
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="social-links">
+      <div class="links">
+        <i class='bx bxl-facebook-circle icon'></i>
+        <p><a href="https://www.facebook.com/anthonyd.139" target="_blank" title="Anthony Domasig — Facebook">Facebook</a></p>
+      </div>
+      <div class="links">
+        <i class='bx bxl-instagram icon'></i>
+        <p><a href="https://www.instagram.com/yeageurr" target="_blank" title="Anthony Domasig — Instagram">Instagram</a></p>
+      </div>
+      <div class="links">
+        <i class='bx bxl-github icon'></i>
+        <p><a href="https://www.github.com/yeageurr" target="_blank" title="Anthony Domasig — Github">Github</a></p>
+      </div>
+    </div>
+    <div class="labels">
+      <p class="copyright"><i class='bx bx-copyright'></i> 2025 Domasig — Practical Activity</p>
+      <p>All Rights Reserved</p>
+    </div>
+    <p class="source">Source: <a href="https://www.w3schools.com/" target="_blank">W3schools</a></p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
