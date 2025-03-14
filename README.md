@@ -1,0 +1,2 @@
+# codeology
+ Static Tutorial Page
