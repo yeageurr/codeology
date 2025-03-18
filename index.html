@@ -20,8 +20,8 @@
     </div>
     <nav class="navigation">
       <ul class="nav__links">
-        <li><button id="home_btn" onclick="hideLessons()">Home</button></li>
-        <li><button id="about_btn" onclick="hideLessons()">About</button></li>
+        <li><button id="home_btn" onclick="homepage()">Home</button></li>
+        <li><button id="about_btn" onclick="about()">About</button></li>
         <li><button class="header_lesson" id="html_btn">HTML</button></li>
         <li><button class="header_lesson" id="js_btn" value="1">JavaScript</button></li>
         <li><button class="header_lesson" id="php_btn" value="2">PHP</button></li>
@@ -42,14 +42,6 @@
           <li id="html__metadata"><button>HTML Metadata</button></li>
           <li id="html__textF"><button>HTML Text Formatting</button></li>
           <li id="html__semantics"><button>HTML Semantic Elements</button></li>
-          <li id="html__links"><button>HTML Links</button></li>
-          <li id="html__media"><button>HTML Images/Media</button></li>
-          <li id="html__forms"><button>HTML Forms</button></li>
-          <li id="html__tables"><button>HTML Tables</button></li>
-          <li id="html__lists"><button>HTML Lists</button></li>
-          <li id="html__layout"><button>HTML Layout</button></li>
-          <li id="html__colors"><button>HTML Colors</button></li>
-          <li id="html__css"><button>HTML CSS</button></li>
         </ul>
       </div>
       <div class="lessons" id="javascript">
@@ -121,21 +113,46 @@
           <li><button>C Strings</button></li>
         </ul>
       </div>
-      <br>
-      <br>
-      <div class="myinfo">
-        <p class="top_label">Works</p>
-        <ul class="works sidenav">
-          <li><button>API Activity</button></li>
-          <li><button>Random Dog API</button></li>
-          <li><button>Random Cat API</button></li>
-          <li><button>Random Quote API</button></li>
-        </ul>
-      </div>
     </aside>
 
     <!--Main Content — Lessons-->
-    <main>
+    <main class="main-section">
+      <section class="homepage">
+        <div class="label_wrapper">
+          <p class="top_label">Home Page</p>
+          <p class="sublabel">Welcome to Codeology! Learn the basic fundamentals of various programming languages. :></p>
+        </div>
+        <div class="languages">
+          <div class="row">
+            <div class="html-container wrapper">
+              <img src="html.png" alt="html">
+              <p class="label">HTML</p>
+            </div>
+
+            <div class="js-container wrapper">
+              <img src="js.png" alt="js">
+              <p class="label">JavaScript</p>
+            </div>
+
+            <div class="php-container wrapper">
+              <img src="php.png" alt="php">
+              <p class="label">Python</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="c-container wrapper">
+              <img src="c.png" alt="c_lang">
+              <p class="label">PHP</p>
+            </div>
+
+            <div class="python-container wrapper">
+              <img src="python.png" alt="python">
+              <p class="label">C Language</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="topics" id="html_default">
         <p class="top_label">HTML Introduction</p>
         <br><hr><br>
@@ -310,6 +327,17 @@
         <br><hr><br>
       </section>
     </main>
+
+    <aside class="activities">
+      <p class="top_label">Works</p>
+      <ul class="works sidenav">
+        <li><button>API Activity</button></li>
+        <li><button>Random Dog API</button></li>
+        <li><button>Random Cat API</button></li>
+        <li><button>Random Quote API</button></li>
+      </ul>
+    </aside>
+
   </div>
 
   <footer class="footer">

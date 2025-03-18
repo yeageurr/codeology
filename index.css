@@ -49,6 +49,7 @@ body {
   font-family: 'Exo 2', sans-serif;
   letter-spacing: 3px;
 }
+
 .myname > .name {
   font-size: 9px;
   font-family: 'Exo 2', sans-serif;
@@ -93,10 +94,11 @@ body {
   display: flex;
   background-color: #fff;
   align-items: center;
+  position: relative;
 }
 
 .side_navigation {
-  width: 23%;
+  width: 0;
   height: 100%;
   font-family: 'Poppins';
   background-color: #141ff9;
@@ -142,9 +144,68 @@ body {
 
 main {
   padding: 25px;
-  width: 100%;
+  width: 98.6%;
   height: 100%;
   overflow-y: auto;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow-y: auto;
+}
+
+.label_wrapper .top_label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  padding: 20px;
+  letter-spacing: 5px;
+}
+
+.label_wrapper .sublabel {
+  font-family: "Verdana", sans-serif;
+  font-size: 20px;
+}
+
+.homepage .languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  width: 13in;
+  flex-wrap: wrap;
+}
+
+.languages .row {
+  display: flex;
+  width: max-content;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin: 35px;
+  background-color: #e5e5e5;
+  padding: 30px;
+  border-radius: 5px;
+  transition: .2s ease-in-out;
+  gap: 20px;
+}
+
+.wrapper img {
+  width: 75px;
+}
+
+.wrapper .label {
+  letter-spacing: 1px;
+}
+
+.wrapper:hover {
+  box-shadow: 1px 1px 20px #000;
+  transform: translateY(-10px);
 }
 
 .topics {
@@ -222,12 +283,63 @@ main {
   width: 150px;
 }
 
+.activities {
+  width: 3%;
+  height: 100%;
+  font-family: 'Poppins';
+  background-color: #141ff9;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  transition: width .2s ease-in-out;
+  text-wrap: nowrap;
+  position: absolute;
+  right: -25px;
+  top: 0;
+}
+
+.activities:hover {
+  width: 18%;
+}
+
+.activities > .top_label {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 15px 35px;
+  color: #fff9f9;
+  text-align: center;
+}
+
+.activities .sidenav > li {
+  list-style-type: none;
+  padding: 5px 25px;
+  transition: 150ms ease-in-out;
+}
+
+.activities li > button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #e4dddd;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.activities .sidenav > li:hover {
+  background-color: #2c36fa;
+  padding-left: 35px;
+}
+
 
 .footer {
   width: 100%;
   height: max-content;
   background-color: #1b0533;
-  padding: 15px 0;
+  padding: 18px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
