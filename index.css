@@ -17,6 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  max-width: 100%;
 }
 
 .header {
@@ -80,12 +81,15 @@ body {
 
 .nav__links > li > button:hover {
   background-color: #271639;
-  border-radius: 2px 2px 0 0;
+  border-radius: 7px 7px 0 0;
 }
 
 .nav__links > li > button:focus {
   border-bottom: 2px solid #fff;
-  border-radius: 7px 7px 0 0;
+}
+
+.nav__links > li > .home {
+  border-bottom: 2px solid #fff;
 }
 
 .container {
@@ -104,6 +108,18 @@ body {
   background-color: #141ff9;
   overflow-y: auto;
   box-sizing: border-box;
+}
+
+.sidenav__logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidenav__logo img {
+  width: 100px;
 }
 
 .side_navigation > .lessons {
@@ -126,11 +142,6 @@ body {
   transition: 150ms ease-in-out;
 }
 
-.side_navigation .sidenav > li:hover {
-  background-color: #2c36fa;
-  padding-left: 35px;
-}
-
 .side_navigation .sidenav > li button {
   background-color: transparent;
   outline: none;
@@ -144,9 +155,10 @@ body {
 
 main {
   padding: 25px;
-  width: 98.6%;
+  width: 100%;
   height: 100%;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .homepage {
@@ -155,6 +167,7 @@ main {
   align-items: center;
   text-align: center;
   overflow-y: auto;
+  animation: fadein .3s linear 0s 1 normal forwards ;
 }
 
 .label_wrapper .top_label {
@@ -174,7 +187,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;
+  margin: 35px 0;
   width: 13in;
   flex-wrap: wrap;
 }
@@ -193,6 +206,7 @@ main {
   border-radius: 5px;
   transition: .2s ease-in-out;
   gap: 20px;
+  cursor: pointer;
 }
 
 .wrapper img {
@@ -209,7 +223,9 @@ main {
 }
 
 .topics {
+  width: 100%;
   display: none;
+  animation: fadein .3s linear 0s 1 normal forwards;
 }
 
 .topics > .top_label {
@@ -243,15 +259,30 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 14px;
-  background-color: #7cf272;
+  color: #09ff00;
+  background-color: #140428;
   box-sizing: border-box;
-  padding: 15px 0 15px 8px;
+  padding: 25px 25px 25px 20px;
   border-radius: 5px;
+  margin-top: 15px;
 }
 
-.editor > span {
-  color: #92038d;
-  display: block;
+.span {
+  font-size: 14px;
+  background-color: #d2d2d2; 
+  padding: 1px 6px; 
+  border-radius: 3px;
+}
+
+.editor-output {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #140428;
+  box-sizing: border-box;
+  padding: 25px 25px 25px 20px;
+  border-radius: 5px;
 }
 
 .html_codes > p {
@@ -283,19 +314,110 @@ main {
   width: 150px;
 }
 
+.html-tags > .top_label {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.html-tags > .description {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.html-tags > .table > .top_label {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.comments > .top_label, .semantics > .top_label {
+  font-size: 25px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.comments > .description {
+  margin-bottom: 30px;
+}
+
+.topics > .sublabel1 {
+  margin-top: 15px;
+}
+
+.formats > .top_label{
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.formats > .description {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.formats > .element-list {
+  margin-top: 15px;
+  font-size: 15px;
+  margin-left: 50px;
+}
+
+.element-list > li > span {
+  color: #ff0000;
+}
+
+.semantic_elements > li {
+  font-size: 14px;
+  font-family: 'Poppins', serif;
+  margin: 2px 20px 0;
+}
+
+.semantic_elements > li > span {
+  background-color: #b3deff;
+  padding: 0 7px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+.semantics img {
+  margin: 25px 0;
+  width: 375px;
+  height: 350px;
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+}
+
+.btns > .buttons {
+  padding: 3px 5px;
+  margin-top: 10px;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
 .activities {
-  width: 3%;
+  padding-left: 25px;
+  width: 1%;
   height: 100%;
   font-family: 'Poppins';
   background-color: #141ff9;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding-top: 50px;
   transition: width .2s ease-in-out;
   text-wrap: nowrap;
   position: absolute;
-  right: -25px;
+  right: 0;
   top: 0;
 }
 
@@ -334,10 +456,22 @@ main {
   padding-left: 35px;
 }
 
+.acts {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.api_container {
+  width: 75%;
+  height: 100%;
+}
 
 .footer {
   width: 100%;
-  height: max-content;
+  height: 75px;
   background-color: #1b0533;
   padding: 18px 0;
   display: flex;
@@ -399,3 +533,14 @@ p > a:hover {
   font-size: 12px;
   font-family: 'Montserrat',sans-serif;
 }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(50px);}
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

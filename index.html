@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="pagelogo.jpg" type="image/x-icon">
   <link rel="stylesheet" href="index.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>Codeology</title>
@@ -12,7 +13,7 @@
 
   <header class="header">
     <div class="logo__pageName">
-      <img src="images.png" alt="">
+      <img src="pagelogo.jpg" alt="">
       <div class="myname">
         <p class="page_name">CODEOLOGY</p>
         <p class="name">Domasig Anthony</p>
@@ -20,13 +21,13 @@
     </div>
     <nav class="navigation">
       <ul class="nav__links">
-        <li><button id="home_btn" onclick="homepage()">Home</button></li>
-        <li><button id="about_btn" onclick="about()">About</button></li>
-        <li><button class="header_lesson" id="html_btn">HTML</button></li>
-        <li><button class="header_lesson" id="js_btn" value="1">JavaScript</button></li>
-        <li><button class="header_lesson" id="php_btn" value="2">PHP</button></li>
-        <li><button class="header_lesson" id="python_btn" value="3">Python</button></li>
-        <li><button class="header_lesson" id="cLang_btn" value="4">C Language</button></li>
+        <li><button id="home_btn" class="header_lesson home">Home</button></li>
+        <li><button id="about_btn" class="header_lesson about">About</button></li>
+        <li><button class="header_lesson html_nav" id="html_btn">HTML</button></li>
+        <li><button class="header_lesson js_nav" id="js_btn">JavaScript</button></li>
+        <li><button class="header_lesson php_nav" id="php_btn">PHP</button></li>
+        <li><button class="header_lesson python_nav" id="python_btn">Python</button></li>
+        <li><button class="header_lesson c_nav" id="cLang_btn">C Language</button></li>
       </ul>
     </nav>
   </header>
@@ -35,82 +36,74 @@
     <!--Side Navigation Panel-->
     <aside class="side_navigation">
       <div class="lessons" id="html">
-        <p class="top_label">HTML Tutorial</p>
+        <div class="sidenav__logo">
+          <img src="html.png" alt="html-logo">
+        </div>
+        <p class="top_label">HTML5</p>
         <ul class="sidenav">
-          <li id="html_introduction"><button>HTML Introduction</button></li>
-          <li id="html__basics"><button>HTML Basics</button></li>
-          <li id="html__metadata"><button>HTML Metadata</button></li>
-          <li id="html__textF"><button>HTML Text Formatting</button></li>
-          <li id="html__semantics"><button>HTML Semantic Elements</button></li>
+          <li id="html_introduction" class="side_btn intro"><button>HTML Introduction</button></li>
+          <li id="html__basics" class="side_btn tags"><button>HTML Tags/Elements</button></li>
+          <li id="html__comments" class="side_btn comments"><button>HTML Comments</button></li>
+          <li id="html__textF" class="side_btn texts"><button>HTML Text Formatting</button></li>
+          <li id="html__semantics" class="side_btn semantic"><button>HTML Semantic Elements</button></li>
         </ul>
       </div>
+      
       <div class="lessons" id="javascript">
-        <p class="top_label">JavaScript Tutorial</p>
+        <div class="sidenav__logo">
+          <img src="js.png" alt="html-logo">
+        </div>
+        <p class="top_label">JavaScript</p>
         <ul class="sidenav">
-          <li><button>JS Introduction</button></li>
-          <li><button>JS Syntax</button></li>
-          <li><button>JS Output</button></li>
-          <li><button>JS Data Types</button></li>
-          <li><button>JS Variables</button></li>
-          <li><button>JS Operators</button></li>
-          <li><button>JS If... Else...</button></li>
-          <li><button>JS Switch Case</button></li>
-          <li><button>JS Loops</button></li>
-          <li><button>JS Functions</button></li>
-          <li><button>JS DOM Manipulation</button></li>
-          <li><button>JS Events</button></li>
+          <li id="js__introduction" class="side_btn js_intro"><button>JS Introduction</button></li>
+          <li id="js__syntax" class="side_btn js_syntax"><button>JS Syntax</button></li>
+          <li id="js__dataTypes" class="side_btn js_dataTypes"><button>JS Data Types</button></li>
+          <li id="js__variables" class="side_btn js_variables"><button>JS Variables</button></li>
+          <li id="js__operators" class="side_btn js_operators"><button>JS Operators</button></li>
+          <li id="js__conditionals" class="side_btn js_conditionals"><button>JS If... Else...</button></li>
         </ul>
       </div>
+
       <div class="lessons" id="php">
-        <p class="top_label">PHP Tutorial</p>
+        <div class="sidenav__logo">
+          <img src="php.png" alt="html-logo">
+        </div>
+        <p class="top_label">PHP</p>
         <ul class="sidenav">
-          <li><button>PHP Introduction</button></li>
-          <li><button>PHP Syntax</button></li>
-          <li><button>PHP Output</button></li>
-          <li><button>PHP Data Types</button></li>
-          <li><button>PHP Variables</button></li>
-          <li><button>PHP Operators</button></li>
-          <li><button>PHP If... Else...</button></li>
-          <li><button>PHP Switch Case</button></li>
-          <li><button>PHP Loops</button></li>
-          <li><button>PHP Functions</button></li>
-          <li><button>PHP Superglobals</button></li>
+          <li id="php__introduction" class="side_btn php_introduction"><button>PHP Introduction</button></li>
+          <li id="php__syntax" class="side_btn php_syntax"><button>PHP Syntax</button></li>
+          <li id="php__dataTypes" class="side_btn php_dataTypes"><button>PHP Data Types</button></li>
+          <li id="php__variables" class="side_btn php_variables"><button>PHP Variables</button></li>
+          <li id="php__operators" class="side_btn php_operators"><button>PHP Operators</button></li>
+          <li id="php__conditionals" class="side_btn php_conditionals"><button>PHP If... Else...</button></li>
         </ul>
       </div>
       <div class="lessons" id="python">
-        <p class="top_label">Python Tutorial</p>
+        <div class="sidenav__logo">
+          <img src="python.png" alt="html-logo">
+        </div>
+        <p class="top_label">Python3</p>
         <ul class="sidenav">
           <li><button>Python Introduction</button></li>
           <li><button>Python Syntax</button></li>
-          <li><button>Python Output</button></li>
           <li><button>Python Data Types</button></li>
           <li><button>Python Variables</button></li>
           <li><button>Python Operators</button></li>
           <li><button>Python If... Else...</button></li>
-          <li><button>Python Loops</button></li>
-          <li><button>Python Lists</button></li>
-          <li><button>Python Tuples</button></li>
-          <li><button>Python Sets</button></li>
-          <li><button>Python Dictionary</button></li>
-          <li><button>Python Functions</button></li>
-          <li><button>Python Classes/Objects</button></li>
-          <li><button>Python Try... Except...</button></li>
         </ul>
       </div>
       <div class="lessons" id="cLang">
+        <div class="sidenav__logo">
+          <img src="c.png" alt="html-logo">
+        </div>
         <p class="top_label">C Language</p>
         <ul class="sidenav">
           <li><button>C Introduction</button></li>
           <li><button>C Syntax</button></li>
-          <li><button>C Output</button></li>
           <li><button>C Data Types</button></li>
           <li><button>C Variables</button></li>
           <li><button>C If... Else...</button></li>
-          <li><button>C Switch Case</button></li>
           <li><button>C Loops</button></li>
-          <li><button>C Functions</button></li>
-          <li><button>C Arrays</button></li>
-          <li><button>C Strings</button></li>
         </ul>
       </div>
     </aside>
@@ -136,23 +129,24 @@
 
             <div class="php-container wrapper">
               <img src="php.png" alt="php">
-              <p class="label">Python</p>
+              <p class="label">PHP</p>
             </div>
           </div>
           <div class="row">
             <div class="c-container wrapper">
               <img src="c.png" alt="c_lang">
-              <p class="label">PHP</p>
+              <p class="label">C Language</p>
             </div>
 
             <div class="python-container wrapper">
               <img src="python.png" alt="python">
-              <p class="label">C Language</p>
+              <p class="label">Python</p>
             </div>
           </div>
         </div>
       </section>
 
+      <!--HTML Topics-->
       <section class="topics" id="html_default">
         <p class="top_label">HTML Introduction</p>
         <br><hr><br>
@@ -263,78 +257,1295 @@
       </section>
 
       <section class="topics" id="html_basics">
-        <p class="top_label">HTML Basics</p>
+        <p class="top_label">HTML Tags and Elements</p>
         <br><hr><br>
+        <p class="sublabel">HTML documents are made up of elements, which consist of tags, attributes, and content.</p>
+        <br><hr><br>
+
+        <div class="html-tags">
+          <p class="top_label">HTML Elements and Tags</p>
+          <p class="description"><b>HTML tags</b> are the fundamental elements of HTML used for defining the structure of the document. These are letters or words enclosed by angle brackets (< and >).</p>
+          <p class="description">Usually, most of the <b>HTML tags</b> contain an opening and a closing tag. Each tag has a different meaning, and the browser reads the tags and displays the contents enclosed by them accordingly.</p>
+          <br><br>
+
+          <div class="table topic_container">
+            <p class="top_label">Common HTML tags</p>
+            <table>
+              <tr>
+                <td><b>Heading Tags</b></td>
+                <td>< h1 >< /h1 >...< h6 >< /h6 ></and></td>
+              </tr>
+              <tr>
+                <td><b>Paragraph Tag</b></td>
+                <td>< p > < /p ></td>
+              </tr>
+              <tr>
+                <td><b>Line Break Tag</b></td>
+                <td>< br ></td>
+              </tr>
+              <tr>
+                <td><b>Horizontal Rule Tag</b></td>
+                <td>< hr ></td>
+              </tr>
+            </table>
+          </div>
+          <br><hr><br>
+          <p class="top_label">Heading Tags</p>
+          <p class="description"><b>Heading tags</b> are used to define headings of documents. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements < h1 >, < h2 >, < h3 >, < h4 >, < h5 >, and < h6 >. While displaying any heading, the browser adds one line before and one line after that heading.</p>
+          <br>
+          <div class="html_codes topic_container">
+            <p>Example of using heading tags</p>
+            <br>
+            <code class="editor">
+              <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &lt;!DOCTYPE html&gt;
+              <br>
+              &lt;html&gt;
+              <br>
+              &lt;head&gt;
+              <br>
+              &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+              <br>
+              &lt;/head&gt;
+              <br><br>
+              &lt;body&gt;<br><br>
+              &nbsp;&nbsp;&lt;h1&gt;My First Heading&lt;/h1&gt;<br>
+              &nbsp;&nbsp;&lt;h2&gt;My First Heading&lt;/h2&gt;<br>
+              &nbsp;&nbsp;&lt;h3&gt;My First Heading&lt;/h3&gt;<br>
+              &nbsp;&nbsp;&lt;h4&gt;My First Heading&lt;/h4&gt;<br>
+              &nbsp;&nbsp;&lt;h5&gt;My First Heading&lt;/h5&gt;<br>
+              &nbsp;&nbsp;&lt;h6&gt;My First Heading&lt;/h6&gt;<br>
+              <br>&lt;/body&gt;
+              <br>&lt;/html&gt;
+            </code>
+          </div><br><hr><br>
+
+          <p class="top_label">Paragraph Tag</p>
+          <p class="description"><b>The Paragraph tag</b> or the < p > is an HTML element that defines a paragraph. A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+          <br>
+          <div class="html_codes topic_container">
+            <p>Example of using the paragraph tag/element</p>
+            <br>
+            <code class="editor"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &lt;!DOCTYPE html&gt;
+              <br>
+              &lt;html&gt;
+              <br>
+              &lt;head&gt;
+              <br>
+              &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+              <br>
+              &lt;/head&gt;
+              <br><br>
+              &lt;body&gt;<br><br>
+              &nbsp;&nbsp;&lt;p&gt; First paragraph goes here. &lt;/p&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt; Another goes here. &lt;/p&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt; And the last one goes here. You can use as many paragraphs in HTML as you want but here, we will be showing you an example of 3 paragraphs. &lt;/p&gt;<br>
+              <br>&lt;/body&gt;
+              <br>&lt;/html&gt;
+            </code>
+          </div><br><hr><br>
+
+          <p class="top_label">Line Break Tag</p>
+          <p class="description">The <b>Line Break tag</b> or the < br > is an HTML element that produces a line break in text (carriage-return).It is useful for writing a poem or an address, where the division of lines is significant.</p>
+          <br>
+          <div class="html_codes topic_container">
+            <p>Example of using the line-break tag/element</p>
+            <br>
+            <code class="editor"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &lt;!DOCTYPE html&gt;
+              <br>
+              &lt;html&gt;
+              <br>
+              &lt;head&gt;
+              <br>
+              &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+              <br>
+              &lt;/head&gt;
+              <br><br>
+              &lt;body&gt;<br><br>
+              &nbsp;&nbsp;&lt;p&gt; Hello &lt;/p&gt;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt; How are you? I hope you are doing fine. &lt;/p&gt;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt; Sincerely, &lt;/p&gt;&lt;br&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt; Codeology Team &lt;/p&gt;<br>
+              <br>&lt;/body&gt;
+              <br>&lt;/html&gt;
+            </code>
+          </div><br><hr><br>
+
+          <p class="top_label">Hoizontal Rule Tag</p>
+          <p class="description">The <b>Horizontal Rule tag</b> or the < hr > is an HTML element that creates a thematic break or a horizontal line to visually separate sections of content.</p>
+          <p class="description">It's an empty or unpaired tag, meaning it doesn't require a closing tag. </p>
+          <br>
+          <div class="html_codes topic_container">
+            <p>Example of using the horizontal rule tag/element</p>
+            <br>
+            <code class="editor"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &lt;!DOCTYPE html&gt;
+              <br>
+              &lt;html&gt;
+              <br>
+              &lt;head&gt;
+              <br>
+              &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+              <br>
+              &lt;/head&gt;
+              <br><br>
+              &lt;body&gt;<br><br>
+              &nbsp;&nbsp;&lt;p&gt; This is a section on top of the page &lt;/p&gt;<br>
+              &nbsp;&nbsp;&lt;hr&gt;<br>
+              &nbsp;&nbsp;&lt;p&gt; This is another section of the page that should be divided &lt;/p&gt;<br>
+              <br>&lt;/body&gt;
+              <br>&lt;/html&gt;
+            </code>
+          </div><br><hr><br>
+
+          <p class="description">Those are some of the most commonly used HTML tags and elements in a webpage. There are a lot left, maybe you can explore them for yourself! </p>
+
+        </div>
       </section>
 
-      <section class="topics" id="html_metadata">
-        <p class="top_label">HTML Metadata</p>
+      <section class="topics" id="html_comments">
+        <p class="top_label">HTML Comments</p>
         <br><hr><br>
+        <p class="sublabel"><b>HTML comments</b> are non-executable lines of code that do not display on the webpage and are used to add notes or explanations. It is a good practice to add comments into your HTML code, especially in complex documents, to indicate sections of a document and any other notes to anyone looking at the code.</p>
+        <br>
+        <p class="sublabel"><b>HTML comments</b> HTML comments help you and others understand your code and increase code readability and are placed in between &lt;!-- ... --&gt; tags. So, any content placed with &lt;!--... --&gt; tags will be treated as a comment and will be completely ignored by the browser.</p>
+        <br><hr><br>
+
+        <div class="comments">
+          <p class="top_label">Multiline Comments</p>
+          <p class="description">You can comment multiple lines by the special beginning tag &lt;!-- and ending tag --&gt; placed before the first line and end of the last line as shown in the given example below.</p>
+        
+          <div class="html_codes topic_container">
+            <p>Example of adding multiline comments</p>
+            <br>
+            <code class="editor"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &lt;!DOCTYPE html&gt;
+              <br>
+              &lt;html&gt;
+              <br>
+              &lt;head&gt;
+              <br>
+              &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+              <br>
+              &lt;/head&gt;
+              <br><br>
+              &lt;body&gt;<br><br>
+              &nbsp;&nbsp;&lt;!-- Comments can also serve as guides for developers when you are <br>
+              &nbsp;&nbsp;working on a project with a team. This is a multi-line comment by the way. --&gt;<br><br>
+              &nbsp;&nbsp;&lt;p&gt; This is the content of the page that will be displayed. Anything that is <br>
+              &nbsp;&nbsp;enclosed with the comment tag will not be visible on the web page &lt;/p&gt;<br>
+              <br>&lt;/body&gt;
+              <br>&lt;/html&gt;
+            </code>
+          </div><br><hr><br>
+        </div>
       </section>
 
       <section class="topics" id="html_textF">
         <p class="top_label">HTML Text Formatting</p>
         <br><hr><br>
+        <p class="sublabel"><b>HTML Formatting</b> defines the way of content representation on the webpage to improve the readability, to give the semantic meaning, and to improve visual styling.</p>
+        <p class="sublabel1"><b>HTML Formatting</b> is done by using HTML physical and logical tags.</p>
+        <br><hr><br>
+
+        <div class="formats">
+          <p class="top_label">Text Formatting Elements</p>
+          <p class="description">Formatting elements were designed to display special types of text such as:</p>
+          <ul class="element-list">
+            <li><span>&lt;b&gt;</span> - Bold Text</li>
+            <li><span>&lt;strong&gt;</span> - Important Text</li>
+            <li><span>&lt;i&gt;</span> - Italic Text</li>
+            <li><span>&lt;em&gt;</span> - Emphasized Text</li>
+            <li><span>&lt;mark&gt;</span> - Marked Text</li>
+            <li><span>&lt;small&gt;</span> - Smaller Text</li>
+            <li><span>&lt;del&gt;</span> - Deleted Text</li>
+            <li><span>&lt;ins&gt;</span> - Inserted Text</li>
+            <li><span>&lt;sub&gt;</span> - Subscript Text</li>
+            <li><span>&lt;sup&gt;</span> - Superscript Text</li>
+          </ul>
+          <br><hr><br>
+
+          <div class="html_codes topic_container">
+            <p>Examples of using Formatted text elements:</p>
+            <br>
+            <code class="editor"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &lt;!DOCTYPE html&gt;
+              <br>
+              &lt;html&gt;
+              <br>
+              &lt;head&gt;
+              <br>
+              &nbsp;&nbsp;&lt;title&gt;My First Webpage&lt;/title&gt;
+              <br>
+              &lt;/head&gt;
+              <br><br>
+              &lt;body&gt;<br><br>
+              &nbsp;&nbsp;&lt;b&gt; This text is bold. &lt;/b&gt;<br>
+              &nbsp;&nbsp;&lt;strong&gt; This text is important!. &lt;/strong&gt;<br>
+              &nbsp;&nbsp;&lt;i&gt; This text is italic. &lt;/i&gt;<br>
+              &nbsp;&nbsp;&lt;em&gt; This text is emphasized. &lt;/em&gt;<br>
+              &nbsp;&nbsp;&lt;mark&gt; This text is marked. &lt;/mark&gt;<br>
+              &nbsp;&nbsp;&lt;small&gt; This text is small. &lt;/small&gt;<br>
+              &nbsp;&nbsp;&lt;big&gt; This text is big. &lt;/big&gt;<br>
+              &nbsp;&nbsp;&lt;ins&gt; This text is inserted. &lt;/ins&gt;<br>
+              &nbsp;&nbsp;&lt;sub&gt; This text is subscript. &lt;/sub&gt;<br>
+              &nbsp;&nbsp;&lt;sup&gt; This text is superscript. &lt;/sup&gt;<br>
+              <br>&lt;/body&gt;
+              <br>&lt;/html&gt;
+            </code>
+          </div><br>
+          <div class="html_codes topic_container">
+            <p>Output:</p>
+            <br>
+            <code class="editor-output"> <!--Escape Characters: < = &lt;, > = &gt;, tabspace = %nbsp;-->
+              &nbsp;&nbsp;<b>This text is bold.</b><br>
+              &nbsp;&nbsp;<strong>This text is important!.</strong><br>
+              &nbsp;&nbsp;<i>This text is italic.</i><br>
+              &nbsp;&nbsp;<em>This text is emphasized.</em><br>
+              &nbsp;&nbsp;<mark>This text is marked.</mark><br>
+              &nbsp;&nbsp;<small>This text is small.</small><br>
+              &nbsp;&nbsp;<big>This text is big.</big><br>
+              &nbsp;&nbsp;<ins>This text is inserted.</ins><br>
+              &nbsp;&nbsp;<sub>This text is subscript.</sub><br>
+              &nbsp;&nbsp;<sup>This text is superscript.</sup><br>
+            </code>
+          </div>
+        </div>
       </section>
 
       <section class="topics" id="html_semantics">
         <p class="top_label">HTML Semantic Elements</p>
         <br><hr><br>
-      </section>
+        <p class="sublabel"><b>HTML Semantic Elements</b> are tags that clearly define the meaning and purpose of the content they enclose, improving readability, accessibility, and SEO for web pages, rather than just defining presentation.</p>
+        <p class="sublabel1"><b>Semantic elements</b> are a core part of HTML5, designed to improve the structure and meaning of web pages.</p>
+        <br><hr><br>
 
-      <section class="topics" id="html_links">
-        <p class="top_label">HTML Links</p>
+        <div class="semantics">
+          <p class="top_label">Examples of Semantic Elements and their uses:</p>
+          <ul class="semantic_elements topic_container">
+            <li><span class="element">&lt;header&gt;</span>— Contains introductory content, such as a page title, logo, or navigation.</li>
+            <li><span class="element">&lt;footer&gt;</span>— Contains copyright information, contact details, or other concluding content.</li>
+            <li><span class="element">&lt;nav&gt;</span>— Represents a navigation section, containing links to other parts of the website.</li>
+            <li><span class="element">&lt;article&gt;</span>— Represents a self-contained composition, such as a blog post, news article, or forum post.</li>
+            <li><span class="element">&lt;aside&gt;</span>— Contains content that is tangentially related to the main content, such as a sidebar or a related article.</li>
+            <li><span class="element">&lt;section&gt;</span>— Represents a thematic grouping of content, often with a heading.</li>
+            <li><span class="element">&lt;main&gt;</span>— Specifies the main content of a document.</li>
+            <li><span class="element">&lt;address&gt;</span>— Contains contact information for the author or owner of the document.</li>
+            <li><span class="element">&lt;figure&gt;</span>— Represents a piece of content, such as an image, illustration, or code snippet, along with a caption.</li>
+            <li><span class="element">&lt;summary&gt;</span>— Used as a summary, label, or caption for the &lt;details&gt; element.</li>
+            <li><span class="element">&lt;code&gt;</span>— Displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code.</li>
+          </ul>
+          <center><img src="semantics.gif" alt="HTML Semantic Layout"></center>
+          <br><hr><br>
+        </div>
+
+      </section>
+      <!--HTML Topics-->
+
+      <!--Javascript Topics-->
+      <section class="topics" id="js_default">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. <br>It is also very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+        <p style="margin-top: 15px;"> <b>Javascript </b>allows developers to create dynamic web pages, meaning content can change and interact with the user without requiring a full page reload.  </p>
+        <br><hr><br>
+        <p style="font-weight: 500; font-size: 25px; letter-spacing: 1px;">Why study JavaScript?</p>
+        <ul style="margin: 15px 0 0 35px; font-size: 15px;">
+          <li>JavaScript is essential for web development as it enables interactive and dynamic website experiences. It allows developers to create real-time updates, animations, and user-friendly interfaces.</li>
+          <li>It runs directly in all modern browsers without requiring additional installations, making it highly accessible. This means users can interact with web applications instantly without needing extra software.</li>
+          <li>As one of the most widely used programming languages, JavaScript offers excellent career opportunities. Many companies rely on JavaScript for their websites, applications, and software development.</li>
+          <li>JavaScript allows both front-end and back-end development using technologies like Node.js. This flexibility makes it a powerful language for building complete web applications.</li>
+          <li>It supports automation, game development, and even mobile applications, expanding its use beyond just websites. Many popular apps and platforms are built using JavaScript-based frameworks.</li>
+          <li>The language is beginner-friendly, with a vast community and extensive learning resources. Beginners can quickly find tutorials, documentation, and forums to help them get started.</li>
+          <li>Mastering JavaScript opens doors to popular frameworks like React, Vue, and Angular, making development more efficient. These frameworks help developers create scalable and maintainable applications with ease.</li>
+        </ul>
+        <p style="margin-top: 15px; background-color: #caeed7; padding: 5px; border-radius: 5px;">There could be a lot of good reasons to learn <b>JavaScript Programming</b>. But one thing for sure, to learn any programming language, not only JavaScript, you just need to code, and code, and finally code until you become an expert.</p>
+        <br><hr><br>
+        <p style="font-weight: 500; font-size: 25px; letter-spacing: 1px;">What does JavaScript do?</p>
+        <ul style="margin: 15px 0 0 35px; font-size: 15px;">
+          <li><b>Adds Interactivity</b> – Enables dynamic elements like buttons, sliders, and animations on web pages.</li>
+          <li><b>Updates Content Dynamically</b> – Changes text, images, and styles without needing a page reload.</li>
+          <li><b>Validates Forms</b> – Ensures user inputs are correct before submission.</li>
+          <li><b>Manipulates the DOM</b> – Modifies HTML and CSS to change how a webpage looks and behaves.</li>
+          <li><b>Handles Events</b> – Responds to user actions like clicks, key presses, and mouse movements.</li>
+          <li><b>Works with APIs</b> – Fetches and displays data from external sources in real time.</li>
+          <li><b>Supports Backend Development</b> – Powers server-side applications with frameworks like Node.js.</li>
+        </ul>
+        <br><hr><br>
+        <p style="font-weight: 500; font-size: 25px; letter-spacing: 1px;">How JavaScript was developed?</p>
+        <p style="margin: 25px 0 0 0; font-size: 15px;">In <b>1995</b>, a young programmer named <b>Brendan Eich</b> was given just <b>10 days</b> to create a lightweight scripting language for Netscape Navigator, one of the earliest web browsers. His goal was simple: make web pages more interactive. The result? A language initially called <b>Mocha</b>, then <b>LiveScript</b>, and finally <b>JavaScript</b>, after a marketing deal with Sun Microsystems to ride on Java’s popularity.</p>
+        <p style="margin: 10px 0 0 0; font-size: 15px;">By <b>1997</b>, JavaScript was gaining traction, but there was a problem—different browsers started implementing their own versions, causing inconsistencies. To solve this, it was submitted to <b>ECMA International</b>, leading to the first official standard: <b>ECMAScript (ES1)</b>.</p>
+        <p style="margin: 10px 0 0 0; font-size: 15px;">As the web grew, so did JavaScript. In <b>1999</b>, <b>ECMAScript 3 (ES3)</b> introduced powerful new features, making JavaScript more useful for developers. Around the same time, Microsoft’s <b>Internet Explorer</b> implemented its own version, further fueling JavaScript’s rise.</p>
+        <p style="margin: 10px 0 0 0; font-size: 15px;">Fast forward to <b>2005</b>, and a game-changing concept called <b>AJAX (Asynchronous JavaScript and XML)</b> was introduced. For the first time, websites could load data dynamically without refreshing the page, leading to the creation of web applications like <b>Google Maps and Gmail</b>. JavaScript was no longer just a simple scripting language—it was shaping the future of the web.</p>
+        <p style="margin: 10px 0 0 0; font-size: 15px;">By <b>2009</b>, JavaScript was facing new challenges. Developers wanted cleaner, more efficient code. The release of <b>ECMAScript 5 (ES5)</b> introduced improvements like <b>JSON support, new array methods, and strict mode</b>, making JavaScript easier to use and less error-prone.</p>
+        <p style="margin: 10px 0 0 0; font-size: 15px;">Then came <b>2015</b>, a defining moment in JavaScript’s history. <b>ECMAScript 6 (ES6)</b>, also known as <b>ES2015</b>, introduced features like <b>let and const, arrow functions, and classes</b>, making JavaScript more modern and powerful. It was a major shift, allowing developers to write cleaner, more structured code.</p>
+        <p style="margin: 10px 0 0 0; font-size: 15px;">Since then, JavaScript has continued to evolve <b>every year</b>, bringing in <b>async/await for better asynchronous programming, optional chaining for cleaner code</b>, and <b>performance improvements</b> for modern web applications. Today, it powers everything from simple websites to advanced applications like Netflix, Facebook, and even AI-driven platforms.</p>
+        <br><hr><br>
+        <div class="example topic_container" style="padding: 35px;">
+          <p style="font-size: 20px;">A simple demonstration of how JavaScript can change your HTML element styles.</p>
+          <div class="demo" style="width: 250px; height: 250px; margin-top: 15px; background-color: #241734;"></div>
+          <div class="btns">
+            <button type="button" class="buttons" id="blue" style="background-color: #4018f1;">Blue</button>
+            <button type="button" class="buttons" id="red" style="background-color: #f11818;">Red</button>
+            <button type="button" class="buttons" id="green" style="background-color: #18f11f;">Green</button>
+            <button type="button" class="buttons" id="purple" style="background-color: #840e88;">Purple</button>
+          </div>
+        </div>
         <br><hr><br>
       </section>
 
-      <section class="topics" id="html_media">
-        <p class="top_label">HTML Images/Media</p>
+      <section class="topics" id="js_syntax">
+        <p class="top_label">JavaScript Syntax</p>
+        <br><hr><br>
+        <p>JavaScript <b>syntax</b> refers to the set of <b>rules and structure</b> that define how JavaScript code must be written and interpreted by the browser or JavaScript engine. It includes elements such as variables, operators, functions, loops, and conditional statements, which follow a specific order and format.</p>
+        <p style="margin-top: 15px;">JavaScript can be implemented using JavaScript statements that are placed within the <b>&lt;script&gt;... &lt;/script&gt;</b> HTML tags in a web page.</p>
+        <br><hr><br>
+        <p style="font-weight: 500; font-size: 25px; letter-spacing: 1px;">Key Components of JavaScript Syntax</p>
+        <p style="margin-top: 15px;">1. <b>Variables</b> - Used to store data/values.</p>
+        <code class="editor">
+          <p>let name = "Eren Yeager";</p>
+        </code>
+        <p style="margin-top: 35px;">2. <b>Data Types</b> - Strings, numbers, booleans, arrays, objects, etc.</p>
+        <code class="editor">
+          <p>let age = 20; // int </p>
+          <p>let isTitan = true; // Boolean </p>
+        </code>
+        <p style="margin-top: 35px;">3. <b>Operators</b> - Performs actions like addition (+), subtraction (-), and comparisons (==).</p>
+        <code class="editor">
+          <p>let sum = 5 + 10;</p>
+          <p>let difference = 20 - 5;</p>
+        </code>
+        <p style="margin-top: 35px;">4. <b>Functions</b> - Blocks of reusable code.</p>
+        <code class="editor">
+          <p>function sayHi() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;console.log("Hi!");<br>
+          };
+          </p>
+        </code>
+        <p style="margin-top: 35px;">5. <b>Control Statements</b> - Conditional logic using <b>if</b>, <b>else</b>, and <b>switch</b> statements.</p>
+        <code class="editor">
+          <p>if(age >= 18){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log('Adult');<br>
+          };</p>
+        </code>
+        <p style="margin-top: 35px;">6. <b>Loops</b> - Repeat actions using <b>for, while</b>, and <b>do-while</b>.</p>
+        <code class="editor">
+          <p>for(let i = 0; i < 5; i++){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;console.log(i);<br>
+          };</p>
+        </code>
+        <p style="margin-top: 35px;">7. <b>DOM Manipulation</b> - Modify HTML and CSS using JavaScript.</p>
+        <code class="editor">
+          <p>document.querySelector('.btn').addEventListener('click', ()=>{<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('wrapper').style.backgroundColor = '#11ff00';
+            <br>});
+          </p>
+        </code>
+        <br><hr><br>
+        <p style="font-size: 20px;"><b>Conclusion</b></p>
+        <p style="margin-top: 15px;"><b>JavaScript syntax</b> defines the way the language is written and structured to ensure that the computer understands and executes the code correctly. It follows specific rules regarding keywords, symbols, indentation, and order of execution.</p>
+        <p style="margin-top: 25px; padding: 3px 7px; background-color: #c8fdcc; border-radius: 3px;">In the next chapters, we will be talking about the different types of variables, how to use loops in JavaScript, and many more!</p>
+      </section>
+
+      <section class="topics" id="js_dataTypes">
+        <p class="top_label">JavaScript Data Types</p>
+        <br><hr><br>
+        <p>Data types in JavaScript refers to the types of the values that we are storing or working with. One of the most fundamental characteristics of a programming language is the set of data types it supports.</p>
+        <p style="margin-top: 15px;">In JavaScript, there are different types of data that can be stored and manipulated in variables. These data types are categorized into <b>primitive</b> and <b>non-primitive</b> (reference) types.</p>
+        <br><hr><br>
+        <p style="font-size: 25px;">1. <b>Primitive Data Types</b></p>
+        <p style="margin-top: 15px;">Primitive data types are <b>basic</b>, <b>immutable</b>, and <b>stored directly in memory</b>. When a variable holds a primitive value, it contains <b>the actual data</b>, not a reference to it. If you assign a primitive variable to another variable, a copy of the value is created, meaning modifying one does not affect the other.</p>
+        <div class="topic_container" style="margin-top: 25px;">
+          <p style="font-size: 20px; font-weight: 500;">1.1 Strings</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Strings represent sequences of characters and are enclosed in single ('), double ("), or backticks (``) for template literals.</li>
+            <li>Strings are immutable, meaning you cannot change a character directly. Any modifications create a new string.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p>let greeting = "Hello World!";</p>
+            <p>let squad = "Yeagerists";</p>
+            <p>let message = `Shinzou wo sasageyo, ${squad}!`; <span style="color: #aaa;">// Template literals allow interpolations</span></p>
+          </code>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Immutable Behavior Example:</b></p>
+          <code class="editor">
+            <p>let mystring = "Banana";</p>
+            <p>mystring[0] = "A"; <span style="color: #aaa;">// This won't work (strings are immutable)</span></p>
+            <p>console.log(mystring); <span style="color: #aaa;">// Output: "Hello"</span></p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">1.2 Numbers (numeric data)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>JavaScript has only one <b>Number</b> type for both <b>integers</b> and <b>floating-point numbers</b>.</li>
+            <li>It includes special values like <span class="span">NaN</span> (Not a Number), <span class="span">Infinity</span>, and <span class="span">-Infinity</span>.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p>let age = 20; <span style="color: #aaa;">// integer</span></p>
+            <p>let grade = 1.5 <span style="color: #aaa;">// floating-point</span></p>
+            <p>let result = NaN; <span style="color: #aaa;">// Not a number</span></p>
+            <p>let large = Infinity; <span style="color: #aaa;">// Represents an infinitely large number</span></p>
+          </code>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Operations with Numbers:</b></p>
+          <code class="editor">
+            <p>console.log(5 + 3); <span style="color: #aaa;">// Output: 8</span></p>
+            <p>console.log(10 / 0); <span style="color: #aaa;">// Output: Infinity</span></p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">1.3 Boolean (True/False)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Represents <b>true</b> or <b>false</b> values, used for logic and decision-making.</li>
+            <li>Often used in conditional statements.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p>let isRaining = false;</p>
+            <p>let isEmpty = true;</p>
+            <br>
+            <p>if(isEmpty){<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;console.log('Refill.');<br>
+            } else {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;console.log('Drink Coffee.');<br>
+            };</p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">1.4 Undefined (Unassigned Variable)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>If a variable is declared but not assigned a value, it is automatically <b>undefined</b>.</li>
+            <li><b>Undefined is different from null</b>. Undefined means <i>"no value assigned,"</i> while null means <i>"intentional empty value."</i></li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p>let name;</p>
+            <p>console.log(name); <span style="color: #aaa;">// Output: undefined</span></p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">1.5 Null (Intentional Empty Value)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Represents the <b>intentional absence of a value</b>.</li>
+            <li>Often used to <b>reset</b> a variable or indicate that an object should be empty.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p>let name = null;</p>
+            <p>console.log(name); <span style="color: #aaa;">// Output: null</span></p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">1.6 BigInt (Large Numbers)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Introduced in <b>ES11 (ES2020)</b> to store <b>very large numbers</b> beyond <span class="span">Number.MAX_SAFE_INTEGER.</span></li>
+            <li>A BigInt is created by <b>appending "n"</b> to the number.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p>let bigNumber = 81871238123871238186n; // BigInt</p>
+            <p>console.log(bigNumber + 1n); <span style="color: #aaa;">// Output: 81871238123871238187n</span></p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">1.7 Symbol (Unique Identifiers)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Used to create <b>unique values</b> that won’t collide with others.</li>
+            <li>Often used as property keys in objects.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p><i>let</i> id1 = Symbol('id1')</p>
+            <p><i>let</i> id2 = Symbol('id2')</p>
+            <p><i>console.log</i>(id1 === id2) <span style="color: #aaa;">// Output: false (Symbols are unique, always)</span></p>
+          </code>
+        </div>
+        <br><br><hr><br>
+        <p style="font-size: 25px;">1. <b>Non-Primitive (Reference) Data Types</b></p>
+        <p style="margin-top: 15px;"><b>Non-primitive data types</b> are <i>mutable</i> and stored <i>by reference</i>. This means that when you assign a non-primitive variable to another variable, <b>both variables point to the same memory location</b>, not a copy.</p>
+        <div class="topic_container" style="margin-top: 25px;">
+          <p style="font-size: 20px; font-weight: 500;">2.1 Objects (Key-Value Pairs)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Objects store <b>multiple values</b> in key-value pairs.</li>
+            <li>Values can be any <b>data type</b>, including <i>functions</i>.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p><i>let</i> cart_titan = {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;inheritor = 'Pieck Finger',<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;age = 21,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;gender = 'Female'<br>
+            };<br><br>
+          console.log(cart_titan.inheritor); <span style="color: #aaa;">// Output: Pieck Finger</span>
+          </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">2.2 Arrays (Ordered List of Values)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Arrays store <b>multiple values</b> in an indexed format.</li>
+            <li>Can contain <b>different data types</b>.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p><i>let</i> ranks = ['Brigadier', 'Major General', 'Lieutenant General', 'General', 'Commander'];<br><br>
+          console.log(ranks[2]); <span style="color: #aaa;">// Output: Lieutenant General</span>
+          </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">2.3 Functions (Reusable Block of Codes)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>Functions are objects in JavaScript.</li>
+            <li>They can be assigned to variables, passed as arguments, and returned.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p><i>function</i> sayHi(name) {<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;return `Hello, Captain ${name}!`;<br>
+            };<br><br>
+          console.log(sayHi('Levi')); <span style="color: #aaa;">// Output: Hello, Captain Levi!</span>
+          </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 20px; font-weight: 500;">2.4 Date (Represents Date and Time)</p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li>JavaScript provides the <span class="span">Date</span> object to handle date and time.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p><i>let</i> today = new date()<br><br>
+          console.log(today); <span style="color: #aaa;">// Output: current date and time</span>
+          </p>
+          </code>
+        </div>
+        <br><hr><br>
+        <p style="font-size: 20px;"><b>Conclusion</b></p>
+        <p style="margin-top: 15px;">Understanding <b>primitive</b> and <b>non-primitive</b> data types is essential for writing efficient JavaScript code.</p>
+        <ul style="margin: 10px 0 0 25px;">
+          <li><b>Primitive types</b> store values <i>directly</i> and are <i>immutable</i>.</li>
+          <li><b>Non-primitive types</b> store references to objects in memory and are <i>mutable</i>.</li>
+          <li>Always be aware of the difference between <b>storing by value vs. reference</b> to avoid unintended side effects.</li>
+          <li>Examples of <b>Primitive Types </b>are: <span class="span">String</span>, <span class="span">Numbers</span>, <span class="span">Booleans</span>, <span class="span">Null</span>, <span class="span">Undefined</span>, <span class="span">Symbol</span>, and <span class="span">BigInt</span>.</li>
+          <li>Examples of <b>Non-Primitive Types </b>are: <span class="span">Objects</span>, <span class="span">Arrays</span>, <span class="span">Functions</span>, and <span class="span">Date</span>.</li>
+        </ul>
         <br><hr><br>
       </section>
 
-      <section class="topics" id="html_semantics">
-        <p class="top_label">HTML Semantic Elements</p>
+      <section class="topics" id="js_variables">
+        <p class="top_label">JavaScript Variables</p>
+        <br><hr><br>
+        <p><b>JavaScript variables</b> are used to store data that can be changed later on. These variables can be thought of as named containers. You can place data into these containers and then refer to the data simply by naming the container.</p>
+        <p style="margin-top: 15px;"> JavaScript provides different ways to declare variables, and understanding how they work is crucial for writing efficient and bug-free programs.</p>
+        <br><hr><br>
+        <div class="topic_container">
+          <p style="font-size: 23px;"><b>Declaring Variables</b></p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li><span class="span">var</span> — The old way (function scope, can be redeclared)</li>
+            <li><span class="span">let</span> — The modern way (block-scoped, cannot be redeclared in the same scope)</li>
+            <li><span class="span">const</span> — Used for constants (block-scoped, cannot be reassigned)</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Syntax</b>:</p>
+          <code class="editor">
+            <p><i>let</i> name = 'Zeke Yeager'; <span style="color: #aaa;">// Using <i>let</i></span><br>
+              <i>var</i> age = 29; <span style="color: #aaa;">// Using <i>var</i></span><br>
+              <i>const</i> Pi = 3.1416 <span style="color: #aaa;">// Using <i>const</i></span><br>
+            </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 23px;"><b>Key Differences Between <span class="span" style="font-size: 16px;">let</span>, <span class="span" style="font-size: 16px;">var</span>, and <span class="span" style="font-size: 16px;">const</span> variables</b></p>
+          <ul style="margin: 10px 0 0 25px;">
+            <li><b>Scope:</b> <span class="span">var</span> is function-scoped, while <span class="span">let</span> and <span class="span">const</span> are block-scoped.</li>
+            <li><b>Redeclaration:</b> <span class="span">var</span> can be redeclared within the same scope, but <span class="span">let</span> and <span class="span">const</span> cannot.</li>
+            <li><b>Reassignment:</b> <span class="span">var</span> and <span class="span">let</span> can be reassigned, whereas <span class="span">const</span> cannot be changed after initialization.</li>
+          </ul>
+          <p style="margin: 30px 0 0 25px; font-size: 17px;"><b>Example</b>:</p>
+          <code class="editor">
+            <p><i>function</i> myfunction() {<br>
+              &nbsp;&nbsp;<i>if</i> (true) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<i>var</i> x = 10; <span style="color: #aaa;">// Function-scoped</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<i>let</i> y = 20; <span style="color: #aaa;">// Block-scoped</span><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<i>const</i> z = 30; <span style="color: #aaa;">// Block-scoped</span><br>
+              &nbsp;&nbsp;};<br><br>
+              &nbsp;&nbsp;console.log(x); <span style="color: #aaa;">// Output: 10 (works because x is function-scoped)</span><br>
+              &nbsp;&nbsp;console.log(y); <span style="color: #aaa;">// Output: undefined (error because y is block-scoped)</span><br>
+              &nbsp;&nbsp;console.log(z); <span style="color: #aaa;">// Output: undefined (error because z is block-scoped)</span><br>
+            };<br><br>
+            myfunction();
+            </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 23px;"><b>Variable Hoisting</b></p>
+          <p style="margin-top: 10px">
+            Hoisting is JavaScript’s default behavior of moving variable declarations to the top of their scope <b>before execution</b>. <br>
+            This means you can use functions and variables before they are declared in the code.
+          </p>
+          <p style="margin-top: 30px; font-size: 20px; font-weight: 500;">Hoisting with <varspan class="span">var:</span></p>
+          <p style="margin-top: 10px">
+            Variables declared with <span class="span">var</span> are hoisted but <b>not initialized</b>. They get a default value of <span class="span">undefined</span>.
+          </p>
+          <code class="editor">
+            <p>
+              console.log(a); <span style="color: #aaa;">// Output: undefined (Hoisted, but not assigned)</span><br>
+              <i>var</i> a = 10;<br>
+              console.log(a); <span style="color: #aaa;">// Output: 10</span><br>
+            </p>
+          </code>
+          <p style="margin-top: 10px">
+            Even though <span class="span">a</span> is used before its declaration, JavaScript does not throw an error because <span class="span">var a;</span> is hoisted to the top.
+          </p>
+          <br><hr>
+          <p style="margin-top: 30px; font-size: 20px; font-weight: 500;">Hoisting with <span class="span">let</span> and <span class="span">const</span></p>
+          <p style="margin-top: 10px">
+            Variables declared with <span class="span">let</span> and <span class="span">const</span> are also hoisted but are <b>not initialized</b>.<br>
+            Accessing them before their declaration results in a <b>ReferenceError</b>.
+          </p>
+          <code class="editor">
+            <p>
+              console.log(a); <span style="color: #aaa;">// Output: ReferenceError: Cannot access 'a' before initialization</span><br>
+              <i>let</i> a = 10;<br>
+            </p>
+          </code>
+          <br><hr>
+          <p style="margin-top: 30px; font-size: 20px; font-weight: 500;">Hoisting with <i>functions</i></p>
+          <p style="margin-top: 10px">
+            <b>Function declarations</b> are fully hoisted, meaning they can be called before their definition.
+          </p>
+          <code class="editor">
+            <p>
+              sayHi(); <span style="color: #aaa;">// Output: "Hi miss beautiful! :>"</span><br><br>
+              <i>function</i> sayHi() {<br>
+              &nbsp;&nbsp;console.log('Hi miss beautiful! :>');<br>
+            };
+            </p>
+          </code>
+          <p style="margin-top: 35px">
+            However, <b>function expressions</b> (assigned to variables) are hoisted but <b>not initialized</b>, just like <span class="span">let</span> and <span class="span">const</span>.
+          </p>
+          <code class="editor">
+            <p>
+              sayHi(); <span style="color: #aaa;">// Output: TypeError: sayHi is not a function</span><br><br>
+              <i>var</i> sayHi = <i>function()</i> {<br>
+              &nbsp;&nbsp;console.log('Hi miss beautiful! :>');<br>
+            };
+            </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 23px;"><b>Variable Naming Rules</b></p>
+          <ul style="margin: 20px 0 0 25px;">
+            <li><b>Must</b> start with a <i>letter</i>, <i>_ (underscore)</i>, or <i>$ (dollar sign)</i>.</li>
+            <li>Cannot start with a number.</li>
+            <li>JavaScript is <b>case-sensitive</b> (<span class="span">name</span> and <span class="span">Name</span> are different).</li>
+            <li>Reserved keywords (e.g., <span class="span">let</span>, <span class="span">const</span>, <span class="span">var</span>, <span class="span">if</span>) cannot be used.</li>
+          </ul>
+          <br>
+          <p style="margin-top: 10px">
+            <b>Examples of Valid and Invalid Variable Names</b>
+          </p>
+          <code class="editor">
+            <p>
+              <i>let</i> _myVariable = 'Valid'; <span style="color: #aaa;"> // This name is valid</span><br>
+              <i>let</i> $dollarValue = 57.3953; <span style="color: #aaa;"> // This name is also valid</span><br>
+              <i>let</i> userName = "_rivaii"; <span style="color: #aaa;"> // This name is also valid</span><br>
+              <br><br>
+              <i>let</i> 1stUser = "_rivaii"; <span style="color: #aaa;"> // Invalid, cannot start with a number</span><br>
+              <i>let</i> var = "_rivaii"; <span style="color: #aaa;"> // Invalid, reserved keyword</span><br>
+            </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 23px;"><b>Checking the Data Type of a variable</b></p>
+          <p style="margin-top: 10px">
+            In Javascript, we use the <span class="span">typeof</span> built-in function when we want to check what data type a variable holds.
+          </p>
+          <br>
+          <code class="editor">
+            <p>
+              <i>let</i> age = 20;<br>
+              console.log(<span style="color: #ff4d4d;">typeof</span> age); <span style="color: #aaa;">// Output: number</span><br><br>
+              <i>let</i> name = 'Armin Arlert';<br>
+              console.log(<span style="color: #ff4d4d;">typeof</span> name); <span style="color: #aaa;">// Output: string</span><br><br>
+              <i>let</i> isTitan = true;<br>
+              console.log(<span style="color: #ff4d4d;">typeof</span> isTitan); <span style="color: #aaa;">// Output: boolean</span><br><br>
+            </p>
+          </code>
+        </div>
+        <br>
+        <div class="topic_container">
+          <p style="font-size: 23px;"><b>Variable Scope</b></p>
+          <p style="margin-top: 10px">Scope determines where a variable can be accessed. JavaScript has:</p>
+          <ul style="margin: 20px 0 0 25px;">
+            <li><b>Global Scope</b> — Variables declared outside functions.</li>
+            <li><b>Function Scope</b> — Variables declared inside a function.</li>
+            <li><b>Block Scope</b> — Variables declared inside <span class="span">{}</span> using <span class="span">let</span> or <span class="span">const</span>.</li>
+          </ul>
+          <br>
+          <p style="margin-top: 10px">
+            <b>Examples of Global, Function, and Block Scope</b>
+          </p>
+          <code class="editor">
+            <p>
+              <i>let</i> globalVariable = 'Global'; <span style="color: #aaa;"> // Global Variable</span><br><br>
+              <i>function</i> myFunction() {<br>
+                &nbsp;&nbsp;<i>var</i> function_variable = "I'm inside a function"; <span style="color: #aaa;">// A function-scoped variable</span><br>
+                &nbsp;&nbsp;console.log(globalVariable); <span style="color: #aaa;">// Output: 'Global' (global variables are accessible inside and outside a function)</span><br>
+              };<br><br>
+              <i>if</i> (true) {<br>
+                &nbsp;&nbsp;<i>let</i> block_variable = "I'm inside a block"; <span style="color: #aaa;">// A block-scoped variable</span><br>
+                &nbsp;&nbsp;console.log(block_variable); <span style="color: #aaa;">// Output: "I'm inside a block" (accessible since it is inside the if-block)</span><br>
+              };<br><br><br>
+              console.log(globalVariable); <span style="color: #aaa;">// Output: 'Global' (global variable, accessible anywhere)</span><br>
+              console.log(function_variable); <span style="color: #aaa;">// Output: ReferenceError: function_variable is not defined (function-scoped variable, not accessible outside the function where it is declared)</span><br><br>
+              console.log(block_variable); <span style="color: #aaa;">// Output: ReferenceError: block_variable is not defined (block-scoped variable, not accessible outside the if-block where it is declared)</span><br>
+            </p>
+          </code>
+        </div>
+        <br><hr><br>
+        <p style="font-size: 20px;"><b>Conclusion</b></p>
+        <ul style="margin: 10px 0 0 25px;">
+          <li>Use <span class="span">let</span> for variables that change, <span class="span">const</span> for constants, and avoid <span class="span">var</span> in modern JavaScript.</li>
+          <li>Remember <b>hoisting behavior</b> and avoid accessing variables before declaration.</li>
+          <li>Choose <b>meaningful variable names</b> for better readability.</li>
+          <li>Understand <b>scope rules</b> to avoid unexpected behavior in your programs.</li>
+        </ul>
         <br><hr><br>
       </section>
 
-      <section class="topics" id="html_forms">
-        <p class="top_label">HTML Forms</p>
+      <section class="topics" id="js_operators">
+        <p class="top_label">JavaScript Operators</p>
         <br><hr><br>
+        <p>
+          JavaScript <b>operators</b> are used to perform operations on variables and values. They can be categorized based on their functionality.<br>
+          Let us take a simple expression <span class="span">4 + 5</span> is equal to <span class="span">9</span>. Here <span class="span">4</span> and <span class="span">5</span> are called <b>operands</b>, and <span class="span">+</span> is called the <b>operator</b>.
+        </p>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">1. <b>Arithmetic Operators</b></p>
+        <p style="margin-top: 15px;">Arithmetic operators are used to perform mathematical calculations like addition, subtraction, multiplication, division, and more. These operators take numerical values (operands) and return a result based on the operation performed.</p>
+        <div style="margin-top: 20px;">
+          <p><span class="span">+</span><b>(Addition)</b> — Adds two numbers or concatenates strings.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> sum = 10 + 5; <span style="color: #aaa;">// sum is 15</span><br>
+              <i>let</i> name = "Porco" + " " + "Galliard"; <span style="color: #aaa;">// name is "Porco Galliard"</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">-</span><b>(Subtraction)</b> — Subtracts the second number from the first.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> diff = 10 - 5; <span style="color: #aaa;">// diff is 5</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">*</span><b>(Multiplication)</b> — Multiplies two numbers.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> product = 10 * 5; <span style="color: #aaa;">// product is 50</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">/</span><b>(Division)</b> — Divides the first number by the second.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> quotient = 10 / 5; <span style="color: #aaa;">// quotient is 2</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">%</span><b>(Modulus)</b> — Returns the remainder when one number is divided by another.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> remainder = 10 % 5; <span style="color: #aaa;">// remainder is 1</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">**</span><b>(Exponentiation)</b> — Raise a number to a power.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> power = 3 ** 5; <span style="color: #aaa;">// power is 243 (3 raise to the power of 5)</span><br>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">2. <b>Assignment Operators</b></p>
+        <p style="margin-top: 15px;">Assignment operators are used to assign values to variables and modify them in place.</p>
+        <div style="margin-top: 30px;">
+          <p><span class="span">=</span><b>(Assignment)</b> — Assigns a value to a variable.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> age = 75; <span style="color: #aaa;">// age is assigned the value 10</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">+=</span><b>(Addition Assignment)</b> — Adds a value to the variable and assigns the new value.</p>
+          <code class="editor">
+            <p>
+              age += 5; <span style="color: #aaa;">// age is now 80 (same as age = age + 5)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">-=</span><b>(Subtraction Assignment)</b> — Subtracts a value from the variable.</p>
+          <code class="editor">
+            <p>
+              age -= 60; <span style="color: #aaa;">// age is now 20 (same as age = age - 60)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">*=</span><b>(Multiplication Assignment)</b> — Multiplies the variable by a value.</p>
+          <code class="editor">
+            <p>
+              age *= 2; <span style="color: #aaa;">// age is now 40 (same as age = age * 2)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">/=</span><b>(Division Assignment)</b> — Divides the variable by a value.</p>
+          <code class="editor">
+            <p>
+              age /= 2; <span style="color: #aaa;">// age is now 20 (same as age = age / 2)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">%=</span><b>(Modulus Assignment)</b> — Assigns the remainder of division.</p>
+          <code class="editor">
+            <p>
+              age %= 6; <span style="color: #aaa;">// age is now 2 (same as age = age % 6)</span><br>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">3. <b>Comparison Operators</b></p>
+        <p style="margin-top: 15px;">Comparison operators compare two values and return a boolean (<span class="span">true</span> or <span class="span">false</span>). They are commonly used in conditional statements.</p>
+        <div style="margin-top: 30px;">
+          <p><span class="span">==</span><b>(Equal to)</b> — Compares values but ignores data types.</p>
+          <code class="editor">
+            <p>
+              console.log(10 == "10"); <span style="color: #aaa;">// Output: true (compares values only)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">===</span><b>(Strict equal to)</b> — Compares both value and type.</p>
+          <code class="editor">
+            <p>
+              console.log(10 == "10"); <span style="color: #aaa;">// Output: false (compares value and data type)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">!=</span><b>(Not equal to)</b> — Checks if two values are different.</p>
+          <code class="editor">
+            <p>
+              console.log(10 != 5); <span style="color: #aaa;">// Output: true (10 is not equal to 5)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">!==</span><b>(Strict not equal to)</b> — Checks if value and type are both different.</p>
+          <code class="editor">
+            <p>
+              console.log(10 !== 5); <span style="color: #aaa;">// Output: true (value is the same, but type is different)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">></span><b>(Greater than)</b> — Checks if the left value is greater.</p>
+          <code class="editor">
+            <p>
+              console.log(10 > 5); <span style="color: #aaa;">// Output: true</span>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span"><</span><b>(Less than)</b> — Checks if the left value is smaller.</p>
+          <code class="editor">
+            <p>
+              console.log(10 < 5); <span style="color: #aaa;">// Output: false</span>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">>=</span><b>(Greater than or equal to)</b> — Checks if the left value is greater or equal.</p>
+          <code class="editor">
+            <p>
+              console.log(10 >= 10); <span style="color: #aaa;">// Output: true</span>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span"><=</span><b>(Less than or equal to)</b> — Checks if the left value is smaller or equal.</p>
+          <code class="editor">
+            <p>
+              console.log(10 <= 5); <span style="color: #aaa;">// Output: false</span>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">4. <b>Logical Operators</b></p>
+        <p style="margin-top: 15px;">Logical operators allow combining multiple conditions, often used in <span class="span">if</span> statements.</p>
+        <div style="margin-top: 30px;">
+          <p><span class="span">&&</span><b>(Logical AND)</b> — Returns <span class="span">true</span> if both conditions are <b>true</b>.</p>
+          <code class="editor">
+            <p>
+              console.log(true && false); <span style="color: #aaa;">// Output: true</span><br>
+              console.log(15 > 10 && 5 < 3); <span style="color: #aaa;">// Output: false</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">||</span><b>(Logical OR)</b> — Returns <span class="span">true</span> if at least one condition is <b>true</b>.</p>
+          <code class="editor">
+            <p>
+              console.log(true || false); <span style="color: #aaa;">// Output: true</span><br>
+              console.log(15 > 10 || 5 < 3); <span style="color: #aaa;">// Output: true</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">!</span><b>(Logical NOT)</b> — Reverses the boolean value.</p>
+          <code class="editor">
+            <p>
+              console.log(!true); <span style="color: #aaa;">// Output: false</span><br>
+              console.log(!(15 > 10)); <span style="color: #aaa;">// Output: false</span><br>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">5. <b>Bitwise Operators</b></p>
+        <p style="margin-top: 15px;">Bitwise operators work at the binary level and are used in low-level programming.</p>
+        <div style="margin-top: 30px;">
+          <p><span class="span">&</span><b>(Bitwise AND)</b> — Performs an AND operation on bits.</p>
+          <code class="editor">
+            <p>
+              console.log(5 & 1); <span style="color: #aaa;">// Output: 1 (binary: 0101 & 0001 → 0001)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">|</span><b>(Bitwise OR)</b> —  Performs an OR operation on bits.</p>
+          <code class="editor">
+            <p>
+              console.log(5 | 1); <span style="color: #aaa;">// Output: 5 (binary: 0101 | 0001 → 0101)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">^</span><b>(Bitwise XOR)</b> — Returns <span class="span">1</span> if bits are different.</p>
+          <code class="editor">
+            <p>
+              console.log(5 ^ 1); <span style="color: #aaa;">// Output: 4 (binary: 0101 ^ 0001 → 0100)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span"><<</span><b>(Left Shift)</b> — Shifts bits to the left, multiplying by 2.</p>
+          <code class="editor">
+            <p>
+              console.log(5 << 1); <span style="color: #aaa;">// Output: 10 (binary: 0101 → 1010)</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 35px;">
+          <p><span class="span">>></span><b>(Right Shift)</b> — Shifts bits to the right, dividing by 2.</p>
+          <code class="editor">
+            <p>
+              console.log(5 >> 1); <span style="color: #aaa;">// Output: 2 (binary: 0101 → 0010)</span>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">6. <b>Ternary Operator</b></p>
+        <p style="margin-top: 15px;">A shortcut for <span class="span">if-else</span> conditions, often used for quick decisions.</p>
+        <div style="margin-top: 30px;">
+          <p><b>•Syntax</b>: <span class="span">condition ? expression1 : expression2</span></p>
+          <code class="editor">
+            <p>
+              <i>let</i> age = 18;<br>
+              <i>let</i> status = (age >= 18) "Adult" : "Minor";<br><br>
+              console.log(status); <span style="color: #aaa;">// Output: "Adult"</span><br>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;">7. <b>Type Operator</b></p>
+        <p style="margin-top: 15px;">Used to check or determine data types.</p>
+        <div style="margin-top: 30px;">
+          <p>•<span class="span">typeof</span> — Returns the data type of a value.</p>
+          <code class="editor">
+            <p>
+              console.log(<span style="color: #ff4d4d;">typeof</span> "Hello World!"); <span style="color: #aaa;">// Output: "string"</span><br>
+              console.log(<span style="color: #ff4d4d;">typeof</span> 50); <span style="color: #aaa;">// Output: "number"</span><br>
+              console.log(<span style="color: #ff4d4d;">typeof</span> true); <span style="color: #aaa;">// Output: "boolean"</span><br>
+            </p>
+          </code>
+        </div>
+        <div style="margin-top: 20px;">
+          <p>•<span class="span">instanceof</span> — Checks if an object belongs to a certain class.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> myArray = [1, 2, 3];<br><br>
+              console.log(myArray <span style="color: #ff4d4d;">instanceof</span> Array); <span style="color: #aaa;">// Output: "true"</span><br>
+              console.log(myArray <span style="color: #ff4d4d;">instanceof</span> Object); <span style="color: #aaa;">// Output: "true"</span><br>
+              console.log(myArray <span style="color: #ff4d4d;">instanceof</span> String); <span style="color: #aaa;">// Output: "false"</span><br>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 20px;"><b>Conclusion</b></p>
+        <p style="margin-top: 10px;">Understanding JavaScript operators is crucial for performing calculations, making comparisons, and writing logical conditions efficiently.</p>
       </section>
 
-      <section class="topics" id="html_tables">
-        <p class="top_label">HTML Tables</p>
+      <section class="topics" id="js_conditionals">
+        <p class="top_label">JavaScript If...Else</p>
         <br><hr><br>
+        <p>The <span class="span">if...else</span> statement in JavaScript is used to execute a block of code based on a condition. If the condition is <span class="span">true</span>, the <span class="span">if</span> block runs; otherwise, the <span class="span">else</span> block runs.</p>
+        <div style="margin-top: 30px;">
+          <p><b>Basic If Statement</b></p>
+          <p>The <span class="span">if</span> statement executes a block of code only if the condition is true.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> age = 18;<br><br>
+              <i>if</i> (age >= 18) {<br>
+                &nbsp;&nbsp;console.log("You are an adult.");<br>
+              };
+            </p>
+          </code>
+          <p style="margin-top: 15px;"><b>Output: </b><span class="span">"You are an adult."</span></p>
+        </div>
+
+        <br><hr>
+        <div style="margin-top: 30px;">
+          <p><b>If...Else Statement</b></p>
+          <p>The <span class="span">else</span> block runs if the <span class="span">if</span> condition is <span class="span">false</span>.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> age = 15;<br><br>
+              <i>if</i> (age >= 18) {<br>
+                &nbsp;&nbsp;console.log("You are an adult.");<br>
+              } <i>else</i> {<br>
+                &nbsp;&nbsp;console.log("You are a minor.");<br>
+              };
+            </p>
+          </code>
+          <p style="margin-top: 15px;"><b>Output: </b><span class="span">"You are a minor."</span></p>
+        </div>
+
+        <br><hr>
+        <div style="margin-top: 30px;">
+          <p><b>If...Else If...Else Statement</b></p>
+          <p>The <span class="span">else</span> block runs if the <span class="span">if</span> condition is <span class="span">false</span>.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> grade = 85;<br><br>
+              <i>if</i> (grade >= 90) {<br>
+                &nbsp;&nbsp;console.log("Grade: A");<br>
+              } <i>else if</i> (grade >= 80){<br>
+                &nbsp;&nbsp;console.log("Grade: B");<br>
+              } <i>else if</i> (grade >= 70){<br>
+                &nbsp;&nbsp;console.log("Grade: C");<br>
+              } <i>else</i> {<br>
+                &nbsp;&nbsp;console.log("Grade: F");<br>
+              };
+            </p>
+          </code>
+          <p style="margin-top: 15px;"><b>Output: </b><span class="span">"Grade: B"</span></p>
+        </div>
+
+        <br><hr>
+        <div style="margin-top: 30px;">
+          <p><b>Nested If Statement</b></p>
+          <p>An <span class="span">if</span> statement inside another <span class="span">if</span> statement.</p>
+          <code class="editor">
+            <p>
+              <i>let</i> num = 5;<br><br>
+              <i>if</i> (num > 0) {<br>
+                &nbsp;&nbsp;console.log("Positive number");<br>
+                &nbsp;&nbsp;<i>if</i> (num % 2 === 0){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log("Even Number");<br>
+                &nbsp;&nbsp;};<br>
+              };<br>
+            </p>
+          </code>
+          <p style="margin-top: 15px;">
+            <b>Output: </b><br>"Positive Number"<br>"Even Number"
+          </p>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 25px;"><b>If...Else Shorthand</b></p>
+        <p style="margin-top: 15px;">If you need a simple <span class="span">if...else</span> statement, you can use the ternary operator instead.</p>
+        <div style="margin-top: 30px;">
+          <p><b>•Syntax</b>: <span class="span">condition ? expression1 : expression2</span></p>
+          <code class="editor">
+            <p>
+              <i>let</i> age = 18;<br>
+              <i>let</i> status = (age >= 18) "Adult" : "Minor";<br><br>
+              console.log(status); <span style="color: #aaa;">// Output: "Adult"</span><br>
+            </p>
+          </code>
+        </div>
+
+        <br><hr><br>
+        <p style="font-size: 20px;"><b>Conclusion</b></p>
+        <p style="margin-top: 10px;">The <span class="span">if...else</span> statement is a fundamental control structure in JavaScript that allows for decision-making based on conditions. It helps execute different blocks of code depending on whether a condition is <span class="span">true</span> or <span class="span">false</span>. By using <b>else if</b>, nested <span class="span">if</span> statements, and ternary operators, you can handle multiple conditions efficiently. Mastering <span class="span">if...else</span> logic is crucial for writing dynamic and interactive JavaScript applications.</p>
+      </section>
+      <!--Javascript Topics-->
+
+      <!--PHP Topics-->
+      <section class="topics" id="php_default">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
       </section>
 
-      <section class="topics" id="html_list">
-        <p class="top_label">HTML Lists</p>
+      <section class="topics" id="php_syntax">
+        <p class="top_label">JavaScript Introduction</p>
         <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
       </section>
 
-      <section class="topics" id="html_layout">
-        <p class="top_label">HTML Layout</p>
+      <section class="topics" id="php_dataTypes">
+        <p class="top_label">JavaScript Introduction</p>
         <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
       </section>
 
-      <section class="topics" id="html_colors">
-        <p class="top_label">HTML Colors</p>
+      <section class="topics" id="php_variables">
+        <p class="top_label">JavaScript Introduction</p>
         <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
       </section>
 
-      <section class="topics" id="html_css">
-        <p class="top_label">HTML CSS</p>
+      <section class="topics" id="php_operators">
+        <p class="top_label">JavaScript Introduction</p>
         <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
       </section>
+
+      <section class="topics" id="php_conditionals">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+      <!--PHP Topics-->
+
+      <!--Python Topics-->
+      <section class="topics" id="python_default">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="python_syntax">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="python_dataTypes">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="python_variables">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="python_operators">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="python_conditionals">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+      <!--Python Topics-->
+
+      <!--C Language Topics-->
+      <section class="topics" id="c_default">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="c_syntax">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="c_dataTypes">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="c_variables">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="c_conditionals">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+
+      <section class="topics" id="c_loops">
+        <p class="top_label">JavaScript Introduction</p>
+        <br><hr><br>
+        <p><b>JavaScript</b> is a lightweight, interpreted programming language. It is commonly used to create dynamic and interactive elements in web applications. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      </section>
+      <!--C Language Topics-->
     </main>
 
     <aside class="activities">
       <p class="top_label">Works</p>
       <ul class="works sidenav">
-        <li><button>API Activity</button></li>
-        <li><button>Random Dog API</button></li>
-        <li><button>Random Cat API</button></li>
-        <li><button>Random Quote API</button></li>
+        <li id="api_activity"><button>API Activity</button></li>
       </ul>
     </aside>
 
@@ -359,7 +1570,6 @@
       <p class="copyright"><i class='bx bx-copyright'></i> 2025 Domasig — Practical Activity</p>
       <p>All Rights Reserved</p>
     </div>
-    <p class="source">Source: <a href="https://www.w3schools.com/" target="_blank">W3schools</a></p>
   </footer>
 
   <script src="index.js"></script>
