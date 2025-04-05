@@ -29,6 +29,7 @@ function displayMainContent(topic) {
 
   topic.style.display = 'block';
   document.querySelector('.homepage').style.display = 'none';
+  document.querySelector('.about_page').style.display = 'none';
   document.querySelector('.activities').style.display = 'flex';
   document.querySelector('.main-section').style.width = '98%';
 }
@@ -62,6 +63,7 @@ document.getElementById('home_btn').addEventListener('click', ()=> {
   document.querySelector('.homepage').style.display = 'flex';
   document.querySelector('.activities').style.display = 'none';
   document.querySelector('.main-section').style.width = '100%';
+  document.querySelector('.about_page').style.display = 'none';
   buttonFocus(home_nav);
 });
 
@@ -82,6 +84,7 @@ document.getElementById('about_btn').addEventListener('click', ()=> {
   document.querySelector('.homepage').style.display = 'none';
   document.querySelector('.activities').style.display = 'none';
   document.querySelector('.main-section').style.width = '100%';
+  document.querySelector('.about_page').style.display = 'block';
   buttonFocus(about_nav);
 });
 // -------------------------------------------------- //
@@ -249,10 +252,11 @@ document.getElementById('php_btn').addEventListener('click', ()=>{
 });
 
 document.getElementById('php__introduction').addEventListener('click', ()=>{
-  const js_content = document.querySelector('#js_default');
-  const jsIntro = document.querySelector('.js_intro');
-  sideButtonFocus(jsIntro);
-  displayMainContent(js_content);
+  const mainContent = document.querySelector('#php_default');
+  const sidebtnFocus = document.querySelector('.php_introduction');
+
+  sideButtonFocus(sidebtnFocus);
+  displayMainContent(mainContent);
 });
 
 document.getElementById('php__syntax').addEventListener('click', ()=>{
@@ -304,43 +308,148 @@ document.querySelector('.php-container').addEventListener('click', ()=>{
 // ----------------- PHP Elements ------------------ //
 
 
-// ----------------- PHP Elements ------------------ //
+// ----------------- Python Elements ------------------ //
 document.getElementById('python_btn').addEventListener('click', ()=>{
-  const python_block = document.querySelector('#python');
-  const python_nav = document.querySelector('.python_nav');
+  const sideNavigations = document.querySelector('#python');
+  const headerbtnFocus = document.querySelector('.python_nav');
+  const mainContent = document.querySelector('#python_default');
+  const sidebtnFocus = document.querySelector('.python_introduction');
 
-  buttonFocus(python_nav);
-  displaySideNavigation(python_block);
+  buttonFocus(headerbtnFocus);
+  sideButtonFocus(sidebtnFocus);
+  displaySideNavigation(sideNavigations);
+  displayMainContent(mainContent);
 });
+
+document.querySelector('.python-container').addEventListener('click', ()=>{
+  const sideNavigations = document.querySelector('#python');
+  const headerbtnFocus = document.querySelector('.python_nav');
+  const mainContent = document.querySelector('#python_default');
+  const sidebtnFocus = document.querySelector('.python_introduction');
+
+  buttonFocus(headerbtnFocus);
+  sideButtonFocus(sidebtnFocus);
+  displaySideNavigation(sideNavigations);
+  displayMainContent(mainContent);
+});
+
+document.getElementById('python__introduction').addEventListener('click', ()=>{
+  const sidenav_button = document.querySelector('.python_introduction');
+  const mainContent = document.querySelector('#python_default');
+
+  sideButtonFocus(sidenav_button);
+  displayMainContent(mainContent);
+});
+
+document.getElementById('python__syntax').addEventListener('click', ()=>{
+  const sidenav_button = document.querySelector('.python_syntax');
+  const mainContent = document.querySelector('#python_syntax');
+
+  sideButtonFocus(sidenav_button);
+  displayMainContent(mainContent);
+});
+
+document.getElementById('python__dataTypes').addEventListener('click', ()=>{
+  const sidenav_button = document.querySelector('.python_dataTypes');
+  const mainContent = document.querySelector('#python_dataTypes');
+
+  sideButtonFocus(sidenav_button);
+  displayMainContent(mainContent);
+});
+
+document.getElementById('python__variables').addEventListener('click', ()=>{
+  const sidenav_button = document.querySelector('.python_variables');
+  const mainContent = document.querySelector('#python_variables');
+
+  sideButtonFocus(sidenav_button);
+  displayMainContent(mainContent);
+});
+
+document.getElementById('python__operators').addEventListener('click', ()=>{
+  const sidenav_button = document.querySelector('.python_operators');
+  const mainContent = document.querySelector('#python_operators');
+
+  sideButtonFocus(sidenav_button);
+  displayMainContent(mainContent);
+});
+
+document.getElementById('python__conditionals').addEventListener('click', ()=>{
+  const sidenav_button = document.querySelector('.python_conditionals');
+  const mainContent = document.querySelector('#python_conditionals');
+
+  sideButtonFocus(sidenav_button);
+  displayMainContent(mainContent);
+});
+// ----------------- Python Elements ------------------ //
 
 document.getElementById('cLang_btn').addEventListener('click', ()=>{
   const c_block = document.querySelector('#cLang');
   const c_nav = document.querySelector('.c_nav');
+  const mainContent = document.querySelector('#c_default');
+  const topic = document.querySelector('.c_introduction');
 
+  displayMainContent(mainContent);
   buttonFocus(c_nav);
   displaySideNavigation(c_block);
-});
-
-document.querySelector('.php-container').addEventListener('click', ()=>{
-  const php_page = document.querySelector('#php');
-  const php_nav = document.querySelector('.php_nav');
-
-  buttonFocus(php_nav)
-  displaySideNavigation(php_page);
+  sideButtonFocus(topic);
 });
 
 document.querySelector('.c-container').addEventListener('click', ()=>{
-  const c_page = document.querySelector('#cLang');
-  const c_nav = document.querySelector('.c_nav');
+  const sideNavigations = document.querySelector('#cLang');
+  const headerButton = document.querySelector('.c_nav');
+  const mainContent = document.querySelector('#c_default');
+  const topic = document.querySelector('.c_introduction');
 
-  buttonFocus(c_nav)
-  displaySideNavigation(c_page);
+  displayMainContent(mainContent);
+  buttonFocus(headerButton);
+  displaySideNavigation(sideNavigations);
+  sideButtonFocus(topic);
 });
 
-document.querySelector('.python-container').addEventListener('click', ()=>{
-  const python_page = document.querySelector('#python');
-  const python_nav = document.querySelector('.python_nav');
+document.getElementById('c__introduction').addEventListener('click', ()=>{
+  const mainContent = document.querySelector('#c_default');
+  const topic = document.querySelector('.c_introduction');
 
-  buttonFocus(python_nav)
-  displaySideNavigation(python_page);
+  displayMainContent(mainContent);
+  sideButtonFocus(topic);
+});
+
+document.getElementById('c__syntax').addEventListener('click', ()=>{
+  const mainContent = document.querySelector('#c_syntax');
+  const topic = document.querySelector('.c_syntax');
+
+  displayMainContent(mainContent);
+  sideButtonFocus(topic);
+});
+
+document.getElementById('c__dataTypes').addEventListener('click', ()=>{
+  const mainContent = document.querySelector('#c_dataTypes');
+  const topic = document.querySelector('.c_dataTypes');
+
+  displayMainContent(mainContent);
+  sideButtonFocus(topic);
+});
+
+document.getElementById('c__variables').addEventListener('click', ()=>{
+  const mainContent = document.querySelector('#c_variables');
+  const topic = document.querySelector('.c_variables');
+
+  displayMainContent(mainContent);
+  sideButtonFocus(topic);
+});
+
+document.getElementById('c__conditionals').addEventListener('click', ()=>{
+  const mainContent = document.querySelector('#c_conditionals');
+  const topic = document.querySelector('.c_conditionals');
+
+  displayMainContent(mainContent);
+  sideButtonFocus(topic);
+});
+
+document.getElementById('c__loops').addEventListener('click', ()=>{
+  const mainContent = document.querySelector('#c_loops');
+  const topic = document.querySelector('.c_loops');
+
+  displayMainContent(mainContent);
+  sideButtonFocus(topic);
 });
