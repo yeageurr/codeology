@@ -45,6 +45,22 @@ function sideButtonFocus(button) {
   button.style.paddingLeft = '35px';
   button.style.backgroundColor = '#2c36fa';
 }
+
+let flag = 0;
+
+document.querySelector('.toggle').addEventListener('click', ()=> {
+  if (flag === 0) {
+    document.querySelector('.activities').style.width = "13%";
+    document.querySelector('.toggle').style.transform = "rotate(180deg)";
+    document.querySelector('.toggle').style.color = "#fff";
+    flag++;
+  } else {
+    document.querySelector('.activities').style.width = "0%";
+    document.querySelector('.toggle').style.transform = "rotate(0deg)";
+    document.querySelector('.toggle').style.color = "#000";
+    flag--;
+  }
+})
 // ------------------------------------------------- //
 document.getElementById('home_btn').addEventListener('click', ()=> {
   const topics = document.querySelectorAll('.topics');

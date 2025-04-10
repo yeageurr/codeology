@@ -501,8 +501,7 @@ main {
 }
 
 .activities {
-  padding-left: 25px;
-  width: 1%;
+  width: 0%;
   height: 100%;
   font-family: 'Poppins';
   background-color: #141ff9;
@@ -517,8 +516,12 @@ main {
   top: 0;
 }
 
-.activities:hover {
-  width: 18%;
+.activities > .toggle {
+  position: absolute;
+  top: 5px;
+  right: 13px;
+  font-size: 20px;
+  transition: .2s ease-in-out;
 }
 
 .activities > .top_label {
@@ -536,7 +539,7 @@ main {
   transition: 150ms ease-in-out;
 }
 
-.activities li > button {
+.activities li > a {
   background-color: transparent;
   outline: none;
   border: none;
